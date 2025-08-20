@@ -59,11 +59,11 @@ public class BaseTest {
 	@BeforeClass
 	public void beforeClass() throws InterruptedException, IOException {
 		System.out.println("@BeforeClass--------------------------Launching Browser");
-		String browserName = fileUtility.readDataFromPropertyFile("browserName");
-		String baseUrl = fileUtility.readDataFromPropertyFile("url");
-		
-//		String browserName = System.getProperty("browser");
-//		String baseUrl = System.getProperty("url");
+//		String browserName = fileUtility.readDataFromPropertyFile("browserName");
+//		String baseUrl = fileUtility.readDataFromPropertyFile("url");
+	
+		String browserName = System.getProperty("browser");
+		String baseUrl = System.getProperty("url");
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
